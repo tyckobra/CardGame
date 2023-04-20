@@ -1,36 +1,47 @@
 public class CardGame {
-    String Krigare;
-    int healthpoints; //liv
-    int damage; //skada per träff
-    double attackspeed; //slag per sekund
-    int range; //meter
 
-    public Krigare() {
-        healthpoints = 300;
-        damage = 100;
-        attackspeed = 0.5;
-        range = 1;
+    int hälsa;
+    int styrka;
+    double pricksäkerhet;
+    int trollkraft;
+
+    public String Krigare() {
+        hälsa = 300;
+        styrka = 100;
+        pricksäkerhet = 0.8;
+        trollkraft = 0;
     }
 
-    public Trollkarl() {
-        healthpoints = 150;
-        damage = 75;
-        attackspeed = 0.3;
-        range = 3;
+    public String Trollkarl() {
+        hälsa = 150;
+        styrka = 75;
+        pricksäkerhet = 0.3;
+        trollkraft = 10;
     }
 
-    public Bågskytt() {
-        healthpoints = 100;
-        damage = 50;
-        attackspeed = 0.8;
-        range = 10;
+    public String Bågskytt() {
+        hälsa = 100;
+        styrka = 50;
+        pricksäkerhet = 0.2;
+        trollkraft = 0;
     }
 
-    public Tjuv() {
-        healthpoints = 150;
-        damage = 30;
-        attackspeed = 1.3;
-        range = 1;
+    public String Tjuv() {
+        hälsa = 150;
+        styrka = 30;
+        pricksäkerhet = 1;
+        trollkraft = 0;
+    }
+
+    public String playAgent(String Card) {
+        return Card;
+    }
+
+    public void getCard() {
+        playAgent(Krigare());
+        playAgent(Trollkarl());
+        playAgent(Bågskytt());
+        playAgent(Tjuv());
     }
 
     public static void main(String[] args) {
